@@ -52,7 +52,21 @@
     .article-list article > section:nth-child(3), .article-list .article > section:nth-child(3) {
       height: 60px; }
     .article-list article > section:nth-child(4), .article-list .article > section:nth-child(4) {
-      min-height: 60px; }
+      min-height: 60px;
+      box-sizing: border-box;
+      padding-left: 1rem; }
+      .article-list article > section:nth-child(4) ul, .article-list .article > section:nth-child(4) ul {
+        list-style: none; }
+        .article-list article > section:nth-child(4) ul li:nth-child(1), .article-list .article > section:nth-child(4) ul li:nth-child(1) {
+          margin-bottom: 0.5rem; }
+        .article-list article > section:nth-child(4) ul li, .article-list .article > section:nth-child(4) ul li {
+          margin-top: 0.5rem; }
+          .article-list article > section:nth-child(4) ul li span:nth-child(1), .article-list .article > section:nth-child(4) ul li span:nth-child(1) {
+            font-weight: 600;
+            box-sizing: border-box;
+            padding-right: 0.5rem; }
+          .article-list article > section:nth-child(4) ul li span:nth-child(2), .article-list .article > section:nth-child(4) ul li span:nth-child(2) {
+            font-weight: 400; }
     .article-list article > section:nth-child(3), .article-list article header, .article-list .article > section:nth-child(3), .article-list .article header {
       display: -webkit-box;
       /* OLD - iOS 6-, Safari 3.1-6, BB7 */

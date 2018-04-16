@@ -41,6 +41,30 @@
 
         &> section:nth-child(4) {
             min-height: 60px;
+            box-sizing: border-box;
+            padding-left: 1rem;
+
+            ul {
+                list-style: none;
+
+                li:nth-child(1) {
+                    margin-bottom: 0.5rem;
+                }
+
+                li {
+                    margin-top: 0.5rem;
+
+                    span:nth-child(1) {
+                        font-weight: 600;
+                        box-sizing: border-box;
+                        padding-right: 0.5rem;
+                    }
+
+                    span:nth-child(2) {
+                        font-weight: 400;
+                    }
+                }
+            }
         }
 
         &> section:nth-child(3), header {

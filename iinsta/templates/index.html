@@ -3,8 +3,8 @@
 
 {% block app %}
     <div class='article-list'>
-        {% for i in range(0, 20) %}
-            <article>
+        {% for i in range(0, 3) %}
+            <article id='article-{{ i }}'>
                 <header>
                     <section>
                         <div class='bar-item'>
@@ -12,14 +12,14 @@
                         </div>
                         <div class='bar-item'>
                             <span>
-                                <p>Account Name</p>
+                                <p>AccountName</p>
                                 <i>Gothenburg</i>
                             </span>
                         </div>
                     </section>
                     <section>
                         <div class='bar-item'>
-                            <span class='material-icons'>more_horiz</span>
+                            <span class='material-icons btn-more'>more_horiz</span>
                         </div>
                     </section>
                 </header>
@@ -28,16 +28,23 @@
                 <section>
                     <section>
                         <div class='bar-item'>
-                            <span class='material-icons'>thumb_up</span>
+                            <span class='material-icons btn-like'>thumb_up</span>
                         </div>
                         <div class='bar-item'>
-                            <span class='material-icons'>comment</span>
+                            <span class='material-icons btn-comment'>comment</span>
                         </div>
                     </section>
                     <section></section>
                 </section> <!-- like bar section -->
-                <section></section> <!-- comments section -->
+                <section>
+                    <ul>
+                        <li><span>AccountName</span><span>eyy look at this</span></li>
+                        <li><span>JohnDoe</span><span>this is stupid...</span></li>
+                        <li><span>SomeAccount</span><span>I like it!</span></li>
+                    </ul> 
+                </section> <!-- comments section -->
             </article>
+            <script type='text/javascript'>new Article(document.getElementById('article-{{ i }}'));</script>
         {% endfor %}
     </div>
 {% endblock %}
