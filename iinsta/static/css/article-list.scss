@@ -4,6 +4,8 @@
 .article-list {
     @include display-flex;
     flex-direction: column;
+    max-width: 1024px;
+    margin: auto;
 
     article, .article {
         @include font-default;

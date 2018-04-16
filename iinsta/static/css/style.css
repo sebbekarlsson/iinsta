@@ -29,7 +29,9 @@
   /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
   display: flex;
   /* NEW, Spec - Firefox, Chrome, Opera */
-  flex-direction: column; }
+  flex-direction: column;
+  max-width: 1024px;
+  margin: auto; }
   .article-list article, .article-list .article {
     font-family: 'Lato', sans-serif; }
     .article-list article header, .article-list .article header {
