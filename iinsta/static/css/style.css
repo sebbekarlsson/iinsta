@@ -1,0 +1,111 @@
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  font-feature-settings: 'liga'; }
+
+.article-list {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+  display: flex;
+  /* NEW, Spec - Firefox, Chrome, Opera */
+  flex-direction: column; }
+  .article-list article, .article-list .article {
+    font-family: 'Lato', sans-serif; }
+    .article-list article header, .article-list .article header {
+      height: 60px; }
+      .article-list article header .bar-item:nth-child(2), .article-list .article header .bar-item:nth-child(2) {
+        line-height: 1rem; }
+        .article-list article header .bar-item:nth-child(2) p, .article-list .article header .bar-item:nth-child(2) p {
+          font-weight: 600;
+          font-size: 14px; }
+        .article-list article header .bar-item:nth-child(2) i, .article-list .article header .bar-item:nth-child(2) i {
+          font-weight: 400;
+          font-size: 12px; }
+    .article-list article > section:nth-child(2), .article-list .article > section:nth-child(2) {
+      background-color: lightgray;
+      background-size: 100%;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 468px; }
+    .article-list article > section:nth-child(3), .article-list .article > section:nth-child(3) {
+      height: 60px; }
+    .article-list article > section:nth-child(4), .article-list .article > section:nth-child(4) {
+      min-height: 60px; }
+    .article-list article > section:nth-child(3), .article-list article header, .article-list .article > section:nth-child(3), .article-list .article header {
+      display: -webkit-box;
+      /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+      display: -ms-flexbox;
+      /* TWEENER - IE 10 */
+      display: -webkit-flex;
+      /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+      display: flex;
+      /* NEW, Spec - Firefox, Chrome, Opera */
+      flex-direction: row; }
+      .article-list article > section:nth-child(3) > section, .article-list article header > section, .article-list .article > section:nth-child(3) > section, .article-list .article header > section {
+        flex: 1;
+        display: -webkit-box;
+        /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+        display: -ms-flexbox;
+        /* TWEENER - IE 10 */
+        display: -webkit-flex;
+        /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+        display: flex;
+        /* NEW, Spec - Firefox, Chrome, Opera */
+        flex-direction: row; }
+        .article-list article > section:nth-child(3) > section .bar-item, .article-list article header > section .bar-item, .article-list .article > section:nth-child(3) > section .bar-item, .article-list .article header > section .bar-item {
+          min-width: 72px;
+          display: -webkit-box;
+          /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+          display: -ms-flexbox;
+          /* TWEENER - IE 10 */
+          display: -webkit-flex;
+          /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+          display: flex;
+          /* NEW, Spec - Firefox, Chrome, Opera */
+          justify-content: center;
+          align-items: center;
+          height: 100%;
+          font-size: 14px; }
+      .article-list article > section:nth-child(3) > section:nth-child(1), .article-list article header > section:nth-child(1), .article-list .article > section:nth-child(3) > section:nth-child(1), .article-list .article header > section:nth-child(1) {
+        flex: none;
+        width: 60%; }
+      .article-list article > section:nth-child(3) > section:nth-child(2), .article-list article header > section:nth-child(2), .article-list .article > section:nth-child(3) > section:nth-child(2), .article-list .article header > section:nth-child(2) {
+        justify-content: flex-end; }
+
+.circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  background-color: black;
+  background-size: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+/*# sourceMappingURL=style.css.map */

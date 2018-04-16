@@ -1,0 +1,76 @@
+@import 'mixins.scss';
+
+
+.article-list {
+    @include display-flex;
+    flex-direction: column;
+
+    article, .article {
+        @include font-default;
+
+        header {
+            height: 60px;
+
+            .bar-item:nth-child(2) {
+                line-height: 1rem;
+
+                p {
+                    font-weight: 600;
+                    font-size: 14px;
+                }
+
+                i {
+                    font-weight: 400;
+                    font-size: 12px;
+                }
+            }
+        }
+
+        &> section:nth-child(2) {
+            background-color: lightgray;
+            background-size: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 468px;
+        }
+
+        &> section:nth-child(3) {
+            height: 60px;
+        }
+
+        &> section:nth-child(4) {
+            min-height: 60px;
+        }
+
+        &> section:nth-child(3), header {
+            @include display-flex;
+            flex-direction: row;
+
+            &> section {
+                flex: 1;
+                @include display-flex;
+                flex-direction: row;
+
+                .bar-item {
+                    min-width: 72px;
+
+                    @include display-flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100%;
+                    font-size: 14px;
+                }
+            }
+
+            &> section:nth-child(1) {
+                flex: none;
+                width: 60%;
+            }
+
+            &> section:nth-child(2) {
+                justify-content: flex-end;
+            }
+        }
+    }
+}

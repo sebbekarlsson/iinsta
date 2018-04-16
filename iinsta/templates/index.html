@@ -1,0 +1,43 @@
+{% extends 'app_layout.html' %}
+
+
+{% block app %}
+    <div class='article-list'>
+        {% for i in range(0, 20) %}
+            <article>
+                <header>
+                    <section>
+                        <div class='bar-item'>
+                            <span class='circle'></span>
+                        </div>
+                        <div class='bar-item'>
+                            <span>
+                                <p>Account Name</p>
+                                <i>Gothenburg</i>
+                            </span>
+                        </div>
+                    </section>
+                    <section>
+                        <div class='bar-item'>
+                            <span class='material-icons'>more_horiz</span>
+                        </div>
+                    </section>
+                </header>
+                <section style='background-image: url("https://source.unsplash.com/random?r={{ i }}");'>
+                </section> <!-- image section -->
+                <section>
+                    <section>
+                        <div class='bar-item'>
+                            <span class='material-icons'>thumb_up</span>
+                        </div>
+                        <div class='bar-item'>
+                            <span class='material-icons'>comment</span>
+                        </div>
+                    </section>
+                    <section></section>
+                </section> <!-- like bar section -->
+                <section></section> <!-- comments section -->
+            </article>
+        {% endfor %}
+    </div>
+{% endblock %}
