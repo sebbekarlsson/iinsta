@@ -3,6 +3,10 @@
 
 {% block body %}
     <div class='app'>
+        <nav class='bar-head'>
+            {% block bar_head %}
+            {% endblock %}
+        </nav>
         {% block app %}
         {% endblock %}
     </div>

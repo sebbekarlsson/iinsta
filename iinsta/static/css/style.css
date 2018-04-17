@@ -20,6 +20,46 @@
   /* Support for IE. */
   font-feature-settings: 'liga'; }
 
+.bar-head {
+  width: 100%;
+  height: 44px;
+  background-color: white;
+  z-index: 90;
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: lightgray;
+  font-family: 'Lato', sans-serif;
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+  display: flex;
+  /* NEW, Spec - Firefox, Chrome, Opera */
+  flex-direction: row; }
+  .bar-head section {
+    flex: 1;
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;
+    /* NEW, Spec - Firefox, Chrome, Opera */
+    justify-content: center;
+    align-items: center; }
+    .bar-head section h1 {
+      font-size: 16px;
+      font-weight: 600; }
+
+.app {
+  margin-top: 44px; }
+
 .article-list {
   display: -webkit-box;
   /* OLD - iOS 6-, Safari 3.1-6, BB7 */
@@ -213,20 +253,23 @@
       /* NEW, Spec - Firefox, Chrome, Opera */
       flex-direction: column; }
       .account-article header > section:nth-child(1) > section:nth-child(2) > section {
-        flex: 1;
-        display: -webkit-box;
-        /* OLD - iOS 6-, Safari 3.1-6, BB7 */
-        display: -ms-flexbox;
-        /* TWEENER - IE 10 */
-        display: -webkit-flex;
-        /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
-        display: flex;
-        /* NEW, Spec - Firefox, Chrome, Opera */
-        align-items: center; }
-        .account-article header > section:nth-child(1) > section:nth-child(2) > section button:nth-child(1) {
+        flex: 1; }
+        .account-article header > section:nth-child(1) > section:nth-child(2) > section, .account-article header > section:nth-child(1) > section:nth-child(2) > section form {
+          display: -webkit-box;
+          /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+          display: -ms-flexbox;
+          /* TWEENER - IE 10 */
+          display: -webkit-flex;
+          /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+          display: flex;
+          /* NEW, Spec - Firefox, Chrome, Opera */
+          align-items: center; }
+        .account-article header > section:nth-child(1) > section:nth-child(2) > section input[type='submit'] {
           min-width: 170px;
-          margin-right: 1rem; }
-        .account-article header > section:nth-child(1) > section:nth-child(2) > section button {
+          margin-right: 1rem;
+          vertical-align: middle; }
+        .account-article header > section:nth-child(1) > section:nth-child(2) > section button, .account-article header > section:nth-child(1) > section:nth-child(2) > section input[type='submit'] {
+          display: inline-block;
           border: none;
           outline: none;
           background: none;
@@ -240,6 +283,10 @@
           padding-right: 0.5rem;
           box-sizing: border-box;
           border-radius: 4px; }
+      .account-article header > section:nth-child(1) > section:nth-child(2) > section:nth-child(1) {
+        font-size: 22px; }
+      .account-article header > section:nth-child(1) > section:nth-child(2) > section:nth-child(2) {
+        align-items: baseline; }
   .account-article header > section:nth-child(2) {
     display: -webkit-box;
     /* OLD - iOS 6-, Safari 3.1-6, BB7 */

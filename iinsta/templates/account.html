@@ -1,6 +1,10 @@
 {% extends 'app_layout.html' %}
 
 
+{% block bar_head %}
+    <section><h1>Profile</h1></section>
+{% endblock %}
+
 {% block app %}
     <article class='account-article'>
         <header>
@@ -11,7 +15,10 @@
                 <section>
                     <section>AccountName</section>
                     <section>
-                        <button>follow</button><button><i class='material-icons'>arrow_drop_down</i></button>
+                        <form method='POST'>
+                            <input type='submit' name='follow' value='Follow'/>
+                            <button class='btn-more'><i class='material-icons'>arrow_drop_down</i></button>
+                        </form>
                     </section>
                 </section>
             </section>
@@ -41,4 +48,5 @@
             {% endfor %}
         </section>
     </article>
+    <script type='text/javascript'>new Account(document.querySelector('.account-article'));</script>
 {% endblock %}
