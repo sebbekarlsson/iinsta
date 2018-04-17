@@ -12,6 +12,7 @@
         border-bottom-color: lightgray;
         border-bottom-width: 1px;
         @include font-default;
+        background-color: white;
 
         section {
             flex: 1;

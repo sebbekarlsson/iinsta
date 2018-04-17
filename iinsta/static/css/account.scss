@@ -3,6 +3,8 @@
 
 
 .account-article {
+    background-color: white;
+
     header {
         height: 160px;
         @include display-flex;
