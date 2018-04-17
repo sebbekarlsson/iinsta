@@ -1,3 +1,3 @@
 # iinsta
 
-<img src='iinsta.png' width='300px'/>
+<img src='shot.png' width='300px'/>
