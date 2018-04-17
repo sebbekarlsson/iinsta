@@ -1,0 +1,49 @@
+@import 'mixins.scss';
+
+
+.bar-bottom {
+    width: 100%;
+    height: 44px;
+    background-color: white;
+    z-index: 90;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: lightgray;
+    @include font-default;
+    @include display-flex;
+    flex-direction: row;
+
+    section {
+        flex: 1;
+        @include display-flex;
+        justify-content: center;
+        align-items: center;
+
+        h1 {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+    }
+
+    &[data-feed] {
+        section:nth-child(1) {
+            justify-content: flex-start;
+            box-sizing: border-box;
+            padding-left: 1.4rem;
+        }
+
+        section:nth-child(3) {
+            justify-content: flex-end;
+            box-sizing: border-box;
+            padding-right: 1.4rem;
+        }
+    }
+}
