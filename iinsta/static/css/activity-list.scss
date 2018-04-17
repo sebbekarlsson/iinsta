@@ -1,0 +1,51 @@
+@import 'mixins.scss';
+@import 'variables.scss';
+
+
+.activity-list {
+    .activity-list-item {
+        height: 65px;
+        width: 100%;
+        @include display-flex;
+        flex-direction: row;
+        border-bottom-style: solid;
+        border-bottom-color: lightgray;
+        border-bottom-width: 1px;
+        @include font-default;
+
+        section {
+            flex: 1;
+            @include display-flex;
+            justify-content: center;
+            align-items: center;
+
+            .circle {
+                width: 34px;
+                height: 34px;
+                border-radius: 34px;
+            }
+
+            .square {
+                width: 40px;
+                height: 40px;
+            }
+        }
+
+        section:nth-child(2) {
+            width: 64%;
+            flex: none;
+            font-weight: 400;
+            font-size: 14px;
+
+            b {
+                margin-right: 0.5rem;
+                font-weight: 600;
+            }
+
+            .timestamp {
+                margin-left: 0.5rem;
+                color: $color_text_light;
+            }
+        }
+    }
+}

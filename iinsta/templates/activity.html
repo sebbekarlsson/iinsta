@@ -1,0 +1,22 @@
+{% extends 'app_layout.html' %}
+
+
+{% block bar_head %}
+    <section><h1>Activity</h1></section>
+{% endblock %}
+
+{% block app %}
+    <div class='activity-list'>
+        {% for i in range(0, 100) %}
+            <div class='activity-list-item'>
+                <section>
+                    <span class='circle'></span>
+                </section>
+                <section><b>SomeAccount</b> likes your photo<span class='timestamp'>2d</span></section>
+                <section>
+                    <span class='square'></span>
+                </section>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
