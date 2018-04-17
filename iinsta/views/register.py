@@ -1,4 +1,5 @@
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template, request
+from iinsta.forms.RegisterForm import RegisterForm
 
 
 bp = Blueprint(
@@ -11,4 +12,9 @@ bp = Blueprint(
 
 @bp.route('/', methods=['POST', 'GET'])
 def show():
-    return render_template('register.html')
+    form = RegisterForm(request.form)
+
+    if request.method == 'POST' and form.validate():
+        print('form')
+
+    return render_template('register.html', form=form)

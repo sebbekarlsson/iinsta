@@ -8,6 +8,7 @@ setup(
         'bcrypt',
         'flask_assets',
         'jsmin',
+        'wtforms',
         'flask'
     ],
     packages=[

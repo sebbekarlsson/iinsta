@@ -1,5 +1,7 @@
 {% extends 'layout.html' %}
 
+{% from '_formhelpers.html' import render_field %}
+
 
 {% block body %}
     <div class='view-register'>
@@ -9,6 +11,11 @@
                 <p class='push-down'>Register if you want to see photos and videos from your friends</p>
             </header>
             <hr class='push-down push-up'/>
+            {{ render_field(form.name) }}
+            {{ render_field(form.firstname) }}
+            {{ render_field(form.lastname) }}
+            {{ render_field(form.password) }}
+            <input type='submit' class='btn btn-primary' value='Join'/>
         </form>
     </div>
 {% endblock %}
