@@ -67,6 +67,34 @@
                     }
                 }
             }
+
+            .new-comment {
+                display: none;
+                
+                &[data-active] {
+                    @include display-flex;
+                    flex-direction: row;
+                    height: 48px;
+                }
+
+                input[type='text'] {
+                    width: 80%;
+                    @include font-default;
+                    font-size: 100%;
+                    border: none;
+                    outline: none;
+                    background: none;
+                }
+
+                button {
+                    flex: 1;
+                    @include font-default;
+                    font-size: 100%;
+                    border: none;
+                    outline: none;
+                    background: none;
+                }
+            }
         }
 
         &> section:nth-child(3), header {
