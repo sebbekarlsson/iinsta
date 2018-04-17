@@ -5,6 +5,11 @@
     display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
 }
 
+@mixin remove-mobile-styling {
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+
 @mixin font-default {
     font-family: 'Lato', sans-serif;    
 }

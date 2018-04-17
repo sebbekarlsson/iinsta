@@ -269,6 +269,8 @@
           margin-right: 1rem;
           vertical-align: middle; }
         .account-article header > section:nth-child(1) > section:nth-child(2) > section button, .account-article header > section:nth-child(1) > section:nth-child(2) > section input[type='submit'] {
+          -webkit-appearance: none;
+          border-radius: 0;
           display: inline-block;
           border: none;
           outline: none;

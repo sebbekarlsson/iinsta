@@ -55,6 +55,7 @@
                     }
 
                     button, input[type='submit'] {
+                        @include remove-mobile-styling;
                         display: inline-block;
                         border: none;
                         outline: none;
