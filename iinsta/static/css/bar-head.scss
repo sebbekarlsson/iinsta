@@ -21,14 +21,20 @@
         @include display-flex;
         justify-content: center;
         align-items: center;
+        color: black;
 
         h1 {
             font-size: 16px;
             font-weight: 600;
         }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
     }
 
-    &[data-feed] {
+    &[data-feed], &[data-profile] {
         section:nth-child(1) {
             justify-content: flex-start;
             box-sizing: border-box;

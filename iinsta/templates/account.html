@@ -1,8 +1,12 @@
 {% extends 'app_layout.html' %}
 
 
+{% block bar_head_type %}profile{% endblock %}
+
 {% block bar_head %}
+    <section><a class='material-icons' href='/settings'>settings</a></section>
     <section><h1>Profile</h1></section>
+    <section><a class='material-icons'>person_add</a></section>
 {% endblock %}
 
 {% block app %}

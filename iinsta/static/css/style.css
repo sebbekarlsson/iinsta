@@ -52,15 +52,19 @@
     display: flex;
     /* NEW, Spec - Firefox, Chrome, Opera */
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    color: black; }
     .bar-head section h1 {
       font-size: 16px;
       font-weight: 600; }
-  .bar-head[data-feed] section:nth-child(1) {
+    .bar-head section a {
+      text-decoration: none;
+      color: black; }
+  .bar-head[data-feed] section:nth-child(1), .bar-head[data-profile] section:nth-child(1) {
     justify-content: flex-start;
     box-sizing: border-box;
     padding-left: 1.4rem; }
-  .bar-head[data-feed] section:nth-child(3) {
+  .bar-head[data-feed] section:nth-child(3), .bar-head[data-profile] section:nth-child(3) {
     justify-content: flex-end;
     box-sizing: border-box;
     padding-right: 1.4rem; }
