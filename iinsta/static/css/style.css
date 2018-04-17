@@ -285,7 +285,8 @@
       font-weight: 400;
       text-transform: none;
       text-decoration: none;
-      font-style: normal; }
+      font-style: normal;
+      color: #505050; }
 
 .circle {
   width: 30px;
