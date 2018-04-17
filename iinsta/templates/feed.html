@@ -1,6 +1,14 @@
 {% extends 'app_layout.html' %}
 
 
+{% block bar_head_type %}feed{% endblock %}
+
+{% block bar_head %}
+    <section><i class='material-icons'>photo_camera</i></section>
+    <section><h1>iinsta</h1></section>
+    <section><i class='material-icons'>person_add</i></section>
+{% endblock %}
+
 {% block app %}
     <div class='article-list'>
         {% for i in range(0, 3) %}

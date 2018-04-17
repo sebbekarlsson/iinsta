@@ -3,7 +3,7 @@
 
 {% block body %}
     <div class='app'>
-        <nav class='bar-head'>
+        <nav data-{% block bar_head_type %}normal{% endblock %}="1" class='bar-head'>
             {% block bar_head %}
             {% endblock %}
         </nav>
