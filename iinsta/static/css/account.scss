@@ -1,4 +1,5 @@
 @import 'mixins.scss';
+@import 'variables.scss';
 
 
 .account-article {
@@ -100,7 +101,7 @@
                 text-transform: none;
                 text-decoration: none;
                 font-style: normal;
-                color: rgb(80, 80, 80);
+                color: $color_text_light;
             }
         }
     }
