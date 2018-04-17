@@ -1,0 +1,54 @@
+{% extends 'app_layout.html' %}
+
+
+{% block app %}
+    <div class='article-list'>
+        {% for i in range(0, 3) %}
+            <article id='article-{{ i }}'>
+                <header>
+                    <section>
+                        <div class='bar-item'>
+                            <span class='circle'></span>
+                        </div>
+                        <div class='bar-item'>
+                            <span>
+                                <p>AccountName</p>
+                                <i>Gothenburg</i>
+                            </span>
+                        </div>
+                    </section>
+                    <section>
+                        <div class='bar-item'>
+                            <span class='material-icons btn-more'>more_horiz</span>
+                        </div>
+                    </section>
+                </header>
+                <section style='background-image: url("https://source.unsplash.com/random?r={{ i }}");'>
+                </section> <!-- image section -->
+                <section>
+                    <section>
+                        <div class='bar-item'>
+                            <span class='material-icons btn-like'>thumb_up</span>
+                        </div>
+                        <div class='bar-item'>
+                            <span class='material-icons btn-comment'>comment</span>
+                        </div>
+                    </section>
+                    <section></section>
+                </section> <!-- like bar section -->
+                <section>
+                    <ul>
+                        <li><span>AccountName</span><span>eyy look at this</span></li>
+                        <li><span>JohnDoe</span><span>this is stupid...</span></li>
+                        <li><span>SomeAccount</span><span>I like it!</span></li>
+                    </ul>
+                    <div class='new-comment'>
+                        <input type='text' placeholder='Add a comment...'/>
+                        <button class='btn-comment-publish'>Publish</button>
+                    </div>
+                </section> <!-- comments section -->
+            </article>
+            <script type='text/javascript'>new Article(document.getElementById('article-{{ i }}'));</script>
+        {% endfor %}
+    </div>
+{% endblock %}
