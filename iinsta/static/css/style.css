@@ -282,7 +282,10 @@
     .account-article > section:nth-child(2) > section p {
       font-weight: 600; }
     .account-article > section:nth-child(2) > section i {
-      font-weight: 400; }
+      font-weight: 400;
+      text-transform: none;
+      text-decoration: none;
+      font-style: normal; }
 
 .circle {
   width: 30px;
