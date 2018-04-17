@@ -467,8 +467,26 @@
   background-position: center;
   background-repeat: no-repeat; }
 
+.view-register {
+  min-height: 100vh;
+  font-family: 'Lato', sans-serif;
+  padding-top: 3.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem; }
+  .view-register header {
+    text-align: center; }
+    .view-register header p {
+      font-weight: 600;
+      color: #505050; }
+
 * {
   margin: 0;
   padding: 0; }
+
+.push-down {
+  margin-top: 1rem; }
+
+.push-up {
+  margin-bottom: 1rem; }
 
 /*# sourceMappingURL=style.css.map */

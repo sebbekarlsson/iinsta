@@ -1,0 +1,20 @@
+@import 'mixins.scss';
+@import 'variables.scss';
+
+
+.view-register {
+    min-height: 100vh;
+    @include font-default;
+    padding-top: 3.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    header {
+        text-align: center;
+
+        p {
+            font-weight: 600;
+            color: $color_text_light;
+        }
+    }
+}

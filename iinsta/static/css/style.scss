@@ -8,6 +8,15 @@
 @import 'account.scss';
 @import 'circle.scss';
 @import 'square.scss';
+@import 'view-register.scss';
 
 
 * { margin: 0; padding: 0; }
+
+.push-down {
+    margin-top: 1rem;
+}
+
+.push-up {
+    margin-bottom: 1rem;
+}
