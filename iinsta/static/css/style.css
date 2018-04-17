@@ -137,6 +137,25 @@
       .article-list article > section:nth-child(3) > section:nth-child(2), .article-list article header > section:nth-child(2), .article-list .article > section:nth-child(3) > section:nth-child(2), .article-list .article header > section:nth-child(2) {
         justify-content: flex-end; }
 
+.image-list {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+  display: flex;
+  /* NEW, Spec - Firefox, Chrome, Opera */
+  flex-direction: row;
+  flex-wrap: wrap; }
+  .image-list .image-list-item {
+    width: 123px;
+    height: 123px;
+    background-size: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; }
+
 .account-article header {
   height: 160px;
   display: -webkit-box;
@@ -232,6 +251,38 @@
     /* NEW, Spec - Firefox, Chrome, Opera */
     justify-content: center;
     align-items: center; }
+.account-article > section:nth-child(2) {
+  font-family: 'Lato', sans-serif;
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+  display: flex;
+  /* NEW, Spec - Firefox, Chrome, Opera */
+  flex-direction: row;
+  height: 64px; }
+  .account-article > section:nth-child(2) > section {
+    flex: 1;
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;
+    /* NEW, Spec - Firefox, Chrome, Opera */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: lightgray; }
+    .account-article > section:nth-child(2) > section p {
+      font-weight: 600; }
+    .account-article > section:nth-child(2) > section i {
+      font-weight: 400; }
 
 .circle {
   width: 30px;

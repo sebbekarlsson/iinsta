@@ -21,5 +21,24 @@
                 </p>
             </section>
         </header>
+        <section>
+            <section>
+                <p>1565</p>
+                <i>Posts</i>
+            </section>
+            <section>
+                <p>1565</p>
+                <i>Posts</i>
+            </section>
+            <section>
+                <p>1565</p>
+                <i>Posts</i>
+            </section>
+        </section>
+        <section class='image-list'>
+            {% for i in range(0, 24) %}
+                <div class='image-list-item' style='background-image: url("https://source.unsplash.com/random?r={{ i }}");'></div>
+            {% endfor %}
+        </section>
     </article>
 {% endblock %}

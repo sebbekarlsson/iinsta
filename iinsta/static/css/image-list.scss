@@ -1,0 +1,17 @@
+@import 'mixins.scss';
+
+
+.image-list {
+    @include display-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .image-list-item {
+        width: 123px;
+        height: 123px;
+        background-size: 100%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}

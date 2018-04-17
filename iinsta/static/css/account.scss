@@ -74,4 +74,30 @@
             align-items: center;
         }
     }
+
+    &> section:nth-child(2) {
+        @include font-default;
+        @include display-flex;
+        flex-direction: row;
+        height: 64px;
+
+        &> section {
+            flex: 1;
+            @include display-flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-bottom-style: solid;
+            border-bottom-width: 1px;
+            border-bottom-color: lightgray;
+
+            p {
+                font-weight: 600;
+            }
+
+            i {
+                font-weight: 400;
+            }
+        }
+    }
 }
