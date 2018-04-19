@@ -1,4 +1,11 @@
-from mongoengine import Document, StringField, ReferenceField, ListField
+from mongoengine import (
+    Document,
+    StringField,
+    ReferenceField,
+    ListField,
+    DateTimeField
+)
+import datetime
 from iinsta.entities.Asset import Asset
 from iinsta.entities.User import User
 from iinsta.entities.Comment import Comment
@@ -10,6 +17,7 @@ class Article(Document):
     user = ReferenceField(User, required=True)
     likers = ListField(ReferenceField(User))
     comments = ListField(ReferenceField(Comment))
+    created_at = DateTimeField(default=datetime.datetime.now())
 
     def like(self, user):
         if user not in self.likers:
