@@ -7,6 +7,7 @@ from iinsta.views.feed import bp as feed_bp
 from iinsta.views.account import bp as account_bp
 from iinsta.views.settings import bp as settings_bp
 from iinsta.views.activity import bp as activity_bp
+from iinsta.views.article import bp as article_bp
 from iinsta.views.uploads import bp as uploads_bp
 
 
@@ -24,6 +25,7 @@ app.register_blueprint(feed_bp)
 app.register_blueprint(account_bp)
 app.register_blueprint(settings_bp)
 app.register_blueprint(activity_bp)
+app.register_blueprint(article_bp)
 app.register_blueprint(uploads_bp)
 
 app.jinja_env.globals.update(get_current_user=get_current_user)
