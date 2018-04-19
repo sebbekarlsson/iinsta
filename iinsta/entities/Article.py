@@ -5,9 +5,9 @@ from iinsta.entities.Comment import Comment
 
 
 class Article(Document):
-    media = ReferenceField(Asset)
+    media = ReferenceField(Asset, required=True)
     content = StringField(max_length=140)
-    user = ReferenceField(User)
+    user = ReferenceField(User, required=True)
     likers = ListField(ReferenceField(User))
     comments = ListField(ReferenceField(Comment))
 
