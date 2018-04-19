@@ -1,4 +1,8 @@
 {
     "debug": true,
-    "threaded": true
+    "threaded": true,
+    "mongo": {
+        "host": "localhost",
+        "db": "iinsta"
+    }
 }
