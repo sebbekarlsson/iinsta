@@ -20,7 +20,9 @@
                     <section>{{ user.name }}</section>
                     <section>
                         <form method='POST'>
-                            <input class='btn btn-primary' type='submit' name='follow' value='Follow'/>
+                            {% if current_user != user %}
+                                <input class='btn btn-primary' type='submit' name='follow' value='Follow'/>
+                            {% endif %}
                             <button class='btn btn-primary btn-more'><i class='material-icons'>arrow_drop_down</i></button>
                         </form>
                     </section>
