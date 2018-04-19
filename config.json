@@ -1,6 +1,7 @@
 {
     "debug": true,
     "threaded": true,
+    "uploads_dir": "/tmp/uploads",
     "mongo": {
         "host": "localhost",
         "db": "iinsta"

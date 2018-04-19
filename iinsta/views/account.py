@@ -1,7 +1,9 @@
 from flask import Blueprint, render_template, request
 from iinsta.session_utils import login_required, get_current_user
+from iinsta.asset_utils import upload_file
 from iinsta.forms.ProfileEditForm import ProfileEditForm
 from iinsta.facades.UserFacade import UserFacade
+from iinsta.facades.AssetFacade import AssetFacade
 
 
 bp = Blueprint(__name__, __name__, template_folder='templates')
@@ -40,6 +42,15 @@ def show_edit(account_name):
             'bio': form.bio.data,
             'website': form.website.data
         }
+
+        if 'avatar' in request.files:
+            new_name = upload_file(request.files['avatar'])
+            asset = AssetFacade.create(
+                name=new_name,
+                filename=new_name
+            )
+
+            kwargs['avatar'] = asset
 
         user.update(**kwargs)
         user.save()
