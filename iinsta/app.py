@@ -1,5 +1,6 @@
 from flask import Flask
 from iinsta.session_utils import get_current_user
+from iinsta.views.api import bp as api_bp
 from iinsta.views.index import bp as index_bp
 from iinsta.views.register import bp as register_bp
 from iinsta.views.login import bp as login_bp
@@ -18,6 +19,7 @@ app.config.update(
     TEMPLATES_AUTO_RELOAD=True
 )
 
+app.register_blueprint(api_bp)
 app.register_blueprint(index_bp)
 app.register_blueprint(register_bp)
 app.register_blueprint(login_bp)

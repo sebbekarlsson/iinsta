@@ -1,4 +1,4 @@
-<article id='article-{{ article.id }}'>
+<article id='article-{{ article.id }}' data-id='{{ article.id }}'>
     <header>
         <section>
             <div class='bar-item'>
@@ -33,8 +33,11 @@
     <section>
         <ul>
             <li><span>{{ article.user.name }}</span><span>{{ article.content }}</span></li>
-            <li><span>JohnDoe</span><span>this is stupid...</span></li>
-            <li><span>SomeAccount</span><span>I like it!</span></li>
+        </ul>
+        <ul class='article-comments'>
+            {% for comment in article.comments %}
+                <li><span>{{ comment.user.name }}</span><span>{{ comment.content }}</span></li>
+            {% endfor %}
         </ul>
         <div class='new-comment'>
             <input type='text' placeholder='Add a comment...'/>

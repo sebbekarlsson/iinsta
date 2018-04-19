@@ -19,6 +19,8 @@ def run():
     env.register(
         'js_all',
         flask_assets.Bundle(
+            'wpost.js',
+            'wget.js',
             'utils.js',
             'Article.js',
             'Account.js',

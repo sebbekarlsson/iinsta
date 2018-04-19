@@ -23,5 +23,6 @@ class Article(Document):
 
     def comment(self, user, content):
         comment = Comment(user=user, content=content)
+        comment.save()
         self.comments.append(comment)
         self.save()
