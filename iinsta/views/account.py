@@ -62,4 +62,9 @@ def show_edit(account_name):
     form.bio.data = user.bio
     form.website.data = user.website
 
-    return render_template('account_edit.html', form=form, errors=errors)
+    return render_template(
+        'account_edit.html',
+        form=form,
+        errors=errors,
+        user=user
+    )

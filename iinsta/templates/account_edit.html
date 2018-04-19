@@ -12,6 +12,9 @@
 {% block app %}
     <div class='view-account-edit'>
         <form method='POST' enctype='multipart/form-data'>
+            <header>
+                <span class='circle' style='background-image: url({% if user.avatar %}"/uploads/{{ user.avatar.filename }}"{% else %}"/static/image/avatar.png"{% endif %});'></span>
+            </header>
             {{ render_field(form.avatar) }}
             {{ render_field(form.firstname) }}
             {{ render_field(form.lastname) }}

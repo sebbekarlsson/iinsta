@@ -18,6 +18,21 @@
         }
     }
 
+    &.view-account-edit {
+        header {
+            width: 100%;
+            @include display-flex;
+            align-items: center;
+            justify-content: center;
+
+            .circle {
+                width: 38px;
+                height: 38px;
+                border-radius: 38px;
+            }
+        }
+    }
+
     form {
         .input-text {
             width: 100%;
