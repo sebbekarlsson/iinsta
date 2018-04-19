@@ -14,10 +14,10 @@
         <header>
             <section>
                 <section>
-                    <span class='circle'></span>
+                <span class='circle' style='background-image: url({% if user.avatar %}"/uploads/{{ user.avatar.filename }}"{% else %}"/static/image/avatar.png"{% endif %});'></span>
                 </section>
                 <section>
-                    <section>AccountName</section>
+                    <section>{{ user.name }}</section>
                     <section>
                         <form method='POST'>
                             <input class='btn btn-primary' type='submit' name='follow' value='Follow'/>
@@ -27,9 +27,7 @@
                 </section>
             </section>
             <section>
-                <p>Lorem ipsum dolum ipa, this is my description<br/>
-                <a href='https://google.com/'>https://wow-a-link.com/</a>
-                </p>
+                <p>{{ user.bio }}{% if user.website %}<br/><a href='{{ user.website }}'>{{ user.website }}</a>{% endif %}</p>
             </section>
         </header>
         <section>

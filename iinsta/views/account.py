@@ -1,6 +1,7 @@
 from flask import Blueprint, render_template, request
 from iinsta.session_utils import login_required, get_current_user
 from iinsta.forms.ProfileEditForm import ProfileEditForm
+from iinsta.facades.UserFacade import UserFacade
 
 
 bp = Blueprint(__name__, __name__, template_folder='templates')
@@ -9,17 +10,26 @@ bp = Blueprint(__name__, __name__, template_folder='templates')
 @bp.route('/<account_name>', methods=['POST', 'GET'])
 @login_required
 def show(account_name):
+    user = UserFacade.get(name=account_name)
+
+    if not user:
+        return 'No such user', 404
+
     if request.method == 'POST':
         if request.form.get('follow'):
             print('follow')
 
-    return render_template('account.html')
+    return render_template('account.html', user=user)
 
 
 @bp.route('/<account_name>/edit', methods=['POST', 'GET'])
 @login_required
 def show_edit(account_name):
     user = get_current_user()
+
+    if account_name != user.name:
+        return 'Not Authorized', 401
+
     errors = []
     form = ProfileEditForm(request.form)
 
