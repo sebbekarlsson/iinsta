@@ -1,4 +1,5 @@
 from flask import Flask
+from iinsta.session_utils import get_current_user
 from iinsta.views.index import bp as index_bp
 from iinsta.views.register import bp as register_bp
 from iinsta.views.login import bp as login_bp
@@ -20,3 +21,5 @@ app.register_blueprint(login_bp)
 app.register_blueprint(feed_bp)
 app.register_blueprint(account_bp)
 app.register_blueprint(activity_bp)
+
+app.jinja_env.globals.update(get_current_user=get_current_user)

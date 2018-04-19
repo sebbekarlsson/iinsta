@@ -1,6 +1,8 @@
 {% extends 'layout.html' %}
 
 
+{% set current_user = get_current_user() %}
+
 {% block body %}
     <div class='app'>
         <nav data-{% block bar_head_type %}normal{% endblock %}="1" class='bar-head'>
@@ -14,7 +16,7 @@
             <section><i class='material-icons'>search</i></section>
             <section><i class='material-icons'>add_box</i></section>
             <section><a class='material-icons' href='/activity'>notifications</a></section>
-            <section><a class='material-icons' href='/account'>person</a></section>
+            <section><a class='material-icons' href='/{{ current_user.name }}'>person</a></section>
         </nav>
     </div>
 {% endblock %}
