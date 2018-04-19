@@ -13,3 +13,9 @@ def show(account_name):
             print('follow')
 
     return render_template('account.html')
+
+
+@bp.route('/<account_name>/edit')
+@login_required
+def show_edit(account_name):
+    return render_template('account_edit.html')
