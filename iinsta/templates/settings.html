@@ -1,0 +1,27 @@
+{% extends 'app_layout.html' %}
+
+
+{% block bar_head_type %}settings{% endblock %}
+
+{% block bar_head %}
+    <section><h1>Settings</h1></section>
+{% endblock %}
+
+{% block app %}
+    <div class='view-settings'>
+        <label><h3>account</h3></label>
+        <a href='#' class='settings-btn'>
+            <section>Edit your profile</section>
+            <section><i class='material-icons'>keyboard_arrow_right</i></section>
+        </a>
+        <a href='#' class='settings-btn'>
+            <section>Change password</section>
+            <section><i class='material-icons'>keyboard_arrow_right</i></section>
+        </a>
+        <label><h3>other</h3></label>
+        <a href='/logout' class='settings-btn'>
+            <section>logout</section>
+            <section><i class='material-icons'>keyboard_arrow_right</i></section>
+        </a>
+    </div>
+{% endblock %}

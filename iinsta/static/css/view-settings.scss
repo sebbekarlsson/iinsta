@@ -1,0 +1,62 @@
+@import 'mixins.scss';
+@import 'variables.scss';
+
+
+.view-settings {
+    min-height: 100vh;
+    width: 100%;
+    background-color: $color_light;
+    @include font-default;
+
+    label {
+        height: 44px;
+        line-height: 44px;
+        padding-left: 1rem;
+        box-sizing: border-box;
+        width: 100%;
+        display: block;
+        color: $color_text_light;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .settings-btn {
+        width: 100%;
+        height: 44px;
+        @include display-flex;
+        flex-direction: row;
+        text-decoration: none;
+        background-color: white;
+        border-top-style: solid;
+        border-top-width: 1px;
+        border-top-color: lightgray;
+        border-bottom-style: solid;
+        border-bottom-width: 1px;
+        border-bottom-color: lightgray;
+
+        section {
+            @include display-flex;
+            align-items: center;
+        }
+
+        section:nth-child(1) {
+            flex: 1;
+            color: black;
+            padding-left: 1rem;
+            box-sizing: border-box;
+            text-transform: capitalize;
+        }
+
+        section:nth-child(2) {
+            width: 20%;
+            flex: none;
+            justify-content: center;
+            
+            .material-icons {
+                color: $color_text_light;
+                text-decoration: none;
+            }
+        }
+    }
+}

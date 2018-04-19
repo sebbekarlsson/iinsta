@@ -303,7 +303,7 @@
       font-weight: 600; }
     .activity-list .activity-list-item section:nth-child(2) .timestamp {
       margin-left: 0.5rem;
-      color: #505050; }
+      color: #999; }
 
 .account-article {
   background-color: white; }
@@ -429,7 +429,7 @@
         text-transform: none;
         text-decoration: none;
         font-style: normal;
-        color: #505050; }
+        color: #999; }
 
 .circle {
   width: 30px;
@@ -502,11 +502,71 @@ form dd {
     text-align: center; }
     .view-register header p, .view-login header p {
       font-weight: 600;
-      color: #505050; }
+      color: #999; }
   .view-register form .input-text, .view-login form .input-text {
     width: 100%; }
   .view-register form .btn-primary, .view-login form .btn-primary {
     width: 100%; }
+
+.view-settings {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #fafafa;
+  font-family: 'Lato', sans-serif; }
+  .view-settings label {
+    height: 44px;
+    line-height: 44px;
+    padding-left: 1rem;
+    box-sizing: border-box;
+    width: 100%;
+    display: block;
+    color: #999;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600; }
+  .view-settings .settings-btn {
+    width: 100%;
+    height: 44px;
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;
+    /* NEW, Spec - Firefox, Chrome, Opera */
+    flex-direction: row;
+    text-decoration: none;
+    background-color: white;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: lightgray;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: lightgray; }
+    .view-settings .settings-btn section {
+      display: -webkit-box;
+      /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+      display: -ms-flexbox;
+      /* TWEENER - IE 10 */
+      display: -webkit-flex;
+      /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+      display: flex;
+      /* NEW, Spec - Firefox, Chrome, Opera */
+      align-items: center; }
+    .view-settings .settings-btn section:nth-child(1) {
+      flex: 1;
+      color: black;
+      padding-left: 1rem;
+      box-sizing: border-box;
+      text-transform: capitalize; }
+    .view-settings .settings-btn section:nth-child(2) {
+      width: 20%;
+      flex: none;
+      justify-content: center; }
+      .view-settings .settings-btn section:nth-child(2) .material-icons {
+        color: #999;
+        text-decoration: none; }
 
 * {
   margin: 0;
