@@ -5,7 +5,7 @@
 .view-register {
     min-height: 100vh;
     @include font-default;
-    padding-top: 3.5rem;
+    padding-top: 2rem;
     padding-left: 2rem;
     padding-right: 2rem;
 
@@ -15,6 +15,16 @@
         p {
             font-weight: 600;
             color: $color_text_light;
+        }
+    }
+
+    form {
+        .input-text {
+            width: 100%;
+        }
+
+        .btn-primary {
+            width: 100%;
         }
     }
 }

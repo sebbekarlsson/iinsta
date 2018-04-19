@@ -1,0 +1,52 @@
+@import 'mixins.scss';
+@import 'variables.scss';
+
+
+.input-text {
+    outline: none;
+    border: none;
+    display: inline-block;
+    height: 36px;
+    line-height: 36px;
+    background-color: $color_light;
+    box-sizing: border-box;
+    padding-left: 0.5rem;
+    font-size: 100%;
+    @include font-default;
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #efefef;
+}
+
+.btn {
+    @include remove-mobile-styling;
+    display: inline-block;
+    border: none;
+    outline: none;
+    background: none;
+    background-color: $color_light;
+    color: black;
+    text-align: center;
+    font-size: 100%;
+    height: 26px;
+    line-height: 26px;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    box-sizing: border-box;
+    border-radius: 4px;
+
+    &.btn-primary {
+        background-color: $color_primary;
+        color: white; 
+    }
+}
+
+form {
+    dt {
+        margin-bottom: 0.4rem;
+    }
+    dd {
+        margin-bottom: 1rem;
+    }
+}
