@@ -47,8 +47,8 @@
             </section>
         </section>
         <section class='image-list'>
-            {% for i in range(0, 24) %}
-                <div class='image-list-item' style='background-image: url("https://source.unsplash.com/random?r={{ i }}");'></div>
+            {% for article in articles %}
+                <div class='image-list-item' style='background-image: url("/uploads/{{ article.media.filename }}");'></div>
             {% endfor %}
         </section>
     </article>

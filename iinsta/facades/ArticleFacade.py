@@ -18,8 +18,8 @@ class ArticleFacade(object):
             return None
 
     @staticmethod
-    def get_all():
-        return Article.objects().order_by('name')
+    def get_all(query={}):
+        return Article.objects(**query).order_by('content')
 
     @staticmethod
     def create(**kwargs):

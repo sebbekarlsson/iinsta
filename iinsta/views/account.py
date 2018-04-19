@@ -4,6 +4,7 @@ from iinsta.asset_utils import upload_file
 from iinsta.forms.ProfileEditForm import ProfileEditForm
 from iinsta.facades.UserFacade import UserFacade
 from iinsta.facades.AssetFacade import AssetFacade
+from iinsta.facades.ArticleFacade import ArticleFacade
 
 
 bp = Blueprint(__name__, __name__, template_folder='templates')
@@ -17,11 +18,13 @@ def show(account_name):
     if not user:
         return 'No such user', 404
 
+    articles = ArticleFacade.get_all(query={'user': user})
+
     if request.method == 'POST':
         if request.form.get('follow'):
             print('follow')
 
-    return render_template('account.html', user=user)
+    return render_template('account.html', user=user, articles=articles)
 
 
 @bp.route('/<account_name>/edit', methods=['POST', 'GET'])
