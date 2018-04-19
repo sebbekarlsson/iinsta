@@ -1,0 +1,14 @@
+{% extends 'app_layout.html' %}
+
+
+{% block bar_head_type %}article-single{% endblock %}
+
+{% block bar_head %}
+    <section><h1>{{ article.user.name }}</h1></section>
+{% endblock %}
+
+{% block app %}
+    <div class='view-article'>
+        {% include 'components/article.html' %} 
+    </div>
+{% endblock %}

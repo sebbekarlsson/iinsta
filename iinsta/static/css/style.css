@@ -121,7 +121,7 @@
   margin-top: 44px;
   margin-bottom: 44px; }
 
-.article-list {
+.article-list, .view-article {
   display: -webkit-box;
   /* OLD - iOS 6-, Safari 3.1-6, BB7 */
   display: -ms-flexbox;
@@ -133,46 +133,46 @@
   flex-direction: column;
   max-width: 1024px;
   margin: auto; }
-  .article-list article, .article-list .article {
+  .article-list article, .article-list .article, .view-article article, .view-article .article {
     font-family: 'Lato', sans-serif; }
-    .article-list article header, .article-list .article header {
+    .article-list article header, .article-list .article header, .view-article article header, .view-article .article header {
       height: 60px; }
-      .article-list article header .bar-item:nth-child(2), .article-list .article header .bar-item:nth-child(2) {
+      .article-list article header .bar-item:nth-child(2), .article-list .article header .bar-item:nth-child(2), .view-article article header .bar-item:nth-child(2), .view-article .article header .bar-item:nth-child(2) {
         line-height: 1rem; }
-        .article-list article header .bar-item:nth-child(2) p, .article-list .article header .bar-item:nth-child(2) p {
+        .article-list article header .bar-item:nth-child(2) p, .article-list .article header .bar-item:nth-child(2) p, .view-article article header .bar-item:nth-child(2) p, .view-article .article header .bar-item:nth-child(2) p {
           font-weight: 600;
           font-size: 14px; }
-        .article-list article header .bar-item:nth-child(2) i, .article-list .article header .bar-item:nth-child(2) i {
+        .article-list article header .bar-item:nth-child(2) i, .article-list .article header .bar-item:nth-child(2) i, .view-article article header .bar-item:nth-child(2) i, .view-article .article header .bar-item:nth-child(2) i {
           font-weight: 400;
           font-size: 12px; }
-    .article-list article > section:nth-child(2), .article-list .article > section:nth-child(2) {
+    .article-list article > section:nth-child(2), .article-list .article > section:nth-child(2), .view-article article > section:nth-child(2), .view-article .article > section:nth-child(2) {
       background-color: lightgray;
       background-size: 100%;
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
       height: 468px; }
-    .article-list article > section:nth-child(3), .article-list .article > section:nth-child(3) {
+    .article-list article > section:nth-child(3), .article-list .article > section:nth-child(3), .view-article article > section:nth-child(3), .view-article .article > section:nth-child(3) {
       height: 60px; }
-    .article-list article > section:nth-child(4), .article-list .article > section:nth-child(4) {
+    .article-list article > section:nth-child(4), .article-list .article > section:nth-child(4), .view-article article > section:nth-child(4), .view-article .article > section:nth-child(4) {
       min-height: 60px;
       box-sizing: border-box;
       padding-left: 1rem; }
-      .article-list article > section:nth-child(4) ul, .article-list .article > section:nth-child(4) ul {
+      .article-list article > section:nth-child(4) ul, .article-list .article > section:nth-child(4) ul, .view-article article > section:nth-child(4) ul, .view-article .article > section:nth-child(4) ul {
         list-style: none; }
-        .article-list article > section:nth-child(4) ul li:nth-child(1), .article-list .article > section:nth-child(4) ul li:nth-child(1) {
+        .article-list article > section:nth-child(4) ul li:nth-child(1), .article-list .article > section:nth-child(4) ul li:nth-child(1), .view-article article > section:nth-child(4) ul li:nth-child(1), .view-article .article > section:nth-child(4) ul li:nth-child(1) {
           margin-bottom: 0.5rem; }
-        .article-list article > section:nth-child(4) ul li, .article-list .article > section:nth-child(4) ul li {
+        .article-list article > section:nth-child(4) ul li, .article-list .article > section:nth-child(4) ul li, .view-article article > section:nth-child(4) ul li, .view-article .article > section:nth-child(4) ul li {
           margin-top: 0.5rem; }
-          .article-list article > section:nth-child(4) ul li span:nth-child(1), .article-list .article > section:nth-child(4) ul li span:nth-child(1) {
+          .article-list article > section:nth-child(4) ul li span:nth-child(1), .article-list .article > section:nth-child(4) ul li span:nth-child(1), .view-article article > section:nth-child(4) ul li span:nth-child(1), .view-article .article > section:nth-child(4) ul li span:nth-child(1) {
             font-weight: 600;
             box-sizing: border-box;
             padding-right: 0.5rem; }
-          .article-list article > section:nth-child(4) ul li span:nth-child(2), .article-list .article > section:nth-child(4) ul li span:nth-child(2) {
+          .article-list article > section:nth-child(4) ul li span:nth-child(2), .article-list .article > section:nth-child(4) ul li span:nth-child(2), .view-article article > section:nth-child(4) ul li span:nth-child(2), .view-article .article > section:nth-child(4) ul li span:nth-child(2) {
             font-weight: 400; }
-      .article-list article > section:nth-child(4) .new-comment, .article-list .article > section:nth-child(4) .new-comment {
+      .article-list article > section:nth-child(4) .new-comment, .article-list .article > section:nth-child(4) .new-comment, .view-article article > section:nth-child(4) .new-comment, .view-article .article > section:nth-child(4) .new-comment {
         display: none; }
-        .article-list article > section:nth-child(4) .new-comment[data-active], .article-list .article > section:nth-child(4) .new-comment[data-active] {
+        .article-list article > section:nth-child(4) .new-comment[data-active], .article-list .article > section:nth-child(4) .new-comment[data-active], .view-article article > section:nth-child(4) .new-comment[data-active], .view-article .article > section:nth-child(4) .new-comment[data-active] {
           display: -webkit-box;
           /* OLD - iOS 6-, Safari 3.1-6, BB7 */
           display: -ms-flexbox;
@@ -183,21 +183,21 @@
           /* NEW, Spec - Firefox, Chrome, Opera */
           flex-direction: row;
           height: 48px; }
-        .article-list article > section:nth-child(4) .new-comment input[type='text'], .article-list .article > section:nth-child(4) .new-comment input[type='text'] {
+        .article-list article > section:nth-child(4) .new-comment input[type='text'], .article-list .article > section:nth-child(4) .new-comment input[type='text'], .view-article article > section:nth-child(4) .new-comment input[type='text'], .view-article .article > section:nth-child(4) .new-comment input[type='text'] {
           width: 80%;
           font-family: 'Lato', sans-serif;
           font-size: 100%;
           border: none;
           outline: none;
           background: none; }
-        .article-list article > section:nth-child(4) .new-comment button, .article-list .article > section:nth-child(4) .new-comment button {
+        .article-list article > section:nth-child(4) .new-comment button, .article-list .article > section:nth-child(4) .new-comment button, .view-article article > section:nth-child(4) .new-comment button, .view-article .article > section:nth-child(4) .new-comment button {
           flex: 1;
           font-family: 'Lato', sans-serif;
           font-size: 100%;
           border: none;
           outline: none;
           background: none; }
-    .article-list article > section:nth-child(3), .article-list article header, .article-list .article > section:nth-child(3), .article-list .article header {
+    .article-list article > section:nth-child(3), .article-list article header, .article-list .article > section:nth-child(3), .article-list .article header, .view-article article > section:nth-child(3), .view-article article header, .view-article .article > section:nth-child(3), .view-article .article header {
       display: -webkit-box;
       /* OLD - iOS 6-, Safari 3.1-6, BB7 */
       display: -ms-flexbox;
@@ -207,7 +207,7 @@
       display: flex;
       /* NEW, Spec - Firefox, Chrome, Opera */
       flex-direction: row; }
-      .article-list article > section:nth-child(3) > section, .article-list article header > section, .article-list .article > section:nth-child(3) > section, .article-list .article header > section {
+      .article-list article > section:nth-child(3) > section, .article-list article header > section, .article-list .article > section:nth-child(3) > section, .article-list .article header > section, .view-article article > section:nth-child(3) > section, .view-article article header > section, .view-article .article > section:nth-child(3) > section, .view-article .article header > section {
         flex: 1;
         display: -webkit-box;
         /* OLD - iOS 6-, Safari 3.1-6, BB7 */
@@ -218,7 +218,7 @@
         display: flex;
         /* NEW, Spec - Firefox, Chrome, Opera */
         flex-direction: row; }
-        .article-list article > section:nth-child(3) > section .bar-item, .article-list article header > section .bar-item, .article-list .article > section:nth-child(3) > section .bar-item, .article-list .article header > section .bar-item {
+        .article-list article > section:nth-child(3) > section .bar-item, .article-list article header > section .bar-item, .article-list .article > section:nth-child(3) > section .bar-item, .article-list .article header > section .bar-item, .view-article article > section:nth-child(3) > section .bar-item, .view-article article header > section .bar-item, .view-article .article > section:nth-child(3) > section .bar-item, .view-article .article header > section .bar-item {
           min-width: 72px;
           display: -webkit-box;
           /* OLD - iOS 6-, Safari 3.1-6, BB7 */
@@ -232,10 +232,10 @@
           align-items: center;
           height: 100%;
           font-size: 14px; }
-      .article-list article > section:nth-child(3) > section:nth-child(1), .article-list article header > section:nth-child(1), .article-list .article > section:nth-child(3) > section:nth-child(1), .article-list .article header > section:nth-child(1) {
+      .article-list article > section:nth-child(3) > section:nth-child(1), .article-list article header > section:nth-child(1), .article-list .article > section:nth-child(3) > section:nth-child(1), .article-list .article header > section:nth-child(1), .view-article article > section:nth-child(3) > section:nth-child(1), .view-article article header > section:nth-child(1), .view-article .article > section:nth-child(3) > section:nth-child(1), .view-article .article header > section:nth-child(1) {
         flex: none;
         width: 60%; }
-      .article-list article > section:nth-child(3) > section:nth-child(2), .article-list article header > section:nth-child(2), .article-list .article > section:nth-child(3) > section:nth-child(2), .article-list .article header > section:nth-child(2) {
+      .article-list article > section:nth-child(3) > section:nth-child(2), .article-list article header > section:nth-child(2), .article-list .article > section:nth-child(3) > section:nth-child(2), .article-list .article header > section:nth-child(2), .view-article article > section:nth-child(3) > section:nth-child(2), .view-article article header > section:nth-child(2), .view-article .article > section:nth-child(3) > section:nth-child(2), .view-article .article header > section:nth-child(2) {
         justify-content: flex-end; }
 
 .image-list {

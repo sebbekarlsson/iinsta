@@ -1,4 +1,5 @@
 from flask import Blueprint, render_template, request, redirect
+from bson.objectid import ObjectId
 from iinsta.session_utils import login_required, get_current_user
 from iinsta.asset_utils import upload_file
 from iinsta.forms.ArticleEditForm import ArticleEditForm
@@ -43,3 +44,10 @@ def show_edit():
         user=user,
         errors=errors
     )
+
+
+@bp.route('/<article_id>')
+def show_single(article_id):
+    article = ArticleFacade.get(id=ObjectId(article_id))
+
+    return render_template('article_single.html', article=article)
