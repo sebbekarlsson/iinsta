@@ -1,4 +1,10 @@
-from mongoengine import Document, StringField, ReferenceField, BooleanField
+from mongoengine import (
+    Document,
+    StringField,
+    ReferenceField,
+    BooleanField,
+    ListField
+)
 from iinsta.entities.Asset import Asset
 
 
@@ -11,3 +17,14 @@ class User(Document):
     private = BooleanField(default=False)
     bio = StringField(max_length=140)
     website = StringField(max_length=250)
+    followers = ListField(ReferenceField('User'))
+
+    def follow(self, user):
+        if user not in self.followers:
+            self.followers.append(user)
+            self.save()
+
+    def unfollow(self, user):
+        if user in self.followers:
+            self.followers.remove(user)
+            self.save()
