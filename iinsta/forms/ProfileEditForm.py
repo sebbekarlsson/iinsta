@@ -7,4 +7,4 @@ class ProfileEditForm(Form):
     website = StringField('Website', [validators.Length(max=250)])
     bio = StringField('Biography', [validators.Length(max=140)])
     private = BooleanField('Private')
-    avatar = FileField('Private')
+    avatar = FileField('Avatar')

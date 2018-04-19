@@ -2,7 +2,7 @@
 @import 'variables.scss';
 
 
-.view-register, .view-login {
+.view-register, .view-login, .view-account-edit {
     min-height: 100vh;
     @include font-default;
     padding-top: 2rem;

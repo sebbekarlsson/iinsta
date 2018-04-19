@@ -1,5 +1,7 @@
 {% extends 'app_layout.html' %}
 
+{% from '_formhelpers.html' import render_field %}
+
 
 {% block bar_head_type %}settings{% endblock %}
 
@@ -9,5 +11,14 @@
 
 {% block app %}
     <div class='view-account-edit'>
+        <form method='POST' enctype='multipart/form-data'>
+            {{ render_field(form.avatar) }}
+            {{ render_field(form.firstname) }}
+            {{ render_field(form.lastname) }}
+            {{ render_field(form.bio) }}
+            {{ render_field(form.website) }}
+            <input type='submit' class='btn btn-primary' value='Save'/>
+            {% include 'components/errors.html' %}
+        </form>
     </div>
 {% endblock %}
