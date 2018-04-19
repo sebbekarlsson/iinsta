@@ -1,5 +1,7 @@
 from flask import Blueprint, render_template, request, session, redirect
 from iinsta.forms.LoginForm import LoginForm
+from iinsta.password import check_password
+from iinsta.facades.UserFacade import UserFacade
 
 
 bp = Blueprint(
@@ -15,7 +17,17 @@ def show():
     form = LoginForm(request.form)
 
     if request.method == 'POST' and form.validate():
-        pass
+        user = UserFacade.get(name=form.name.data)
+
+        if not user:
+            errors.append('Wrong credentials')
+        else:
+            if not check_password(user['password'], form.password.data):
+                errors.append('Wrong credentials')
+            else:
+                session['user_id'] = str(user.id)
+
+                return redirect('/')
 
     return render_template('login.html', form=form, errors=errors)
 
