@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+
+{% from '_formhelpers.html' import render_field %}
+
+
+{% block body %}
+    <div class='view-login'>
+        <form method='POST'>
+            <header>
+                <h1>iinsta</h1>
+            </header>
+            <hr class='push-down push-up'/>
+            {{ render_field(form.name) }}
+            {{ render_field(form.password) }}
+            <input type='submit' class='btn btn-primary' value='Login'/>
+            
+            {% include 'components/errors.html' %}
+
+            <p class='push-down'>Don't have an account? <a href='/register'>Register</a></p>
+        </form>
+    </div>
+{% endblock %}

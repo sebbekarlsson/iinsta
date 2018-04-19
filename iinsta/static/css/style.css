@@ -492,20 +492,20 @@ form dt {
 form dd {
   margin-bottom: 1rem; }
 
-.view-register {
+.view-register, .view-login {
   min-height: 100vh;
   font-family: 'Lato', sans-serif;
   padding-top: 2rem;
   padding-left: 2rem;
   padding-right: 2rem; }
-  .view-register header {
+  .view-register header, .view-login header {
     text-align: center; }
-    .view-register header p {
+    .view-register header p, .view-login header p {
       font-weight: 600;
       color: #505050; }
-  .view-register form .input-text {
+  .view-register form .input-text, .view-login form .input-text {
     width: 100%; }
-  .view-register form .btn-primary {
+  .view-register form .btn-primary, .view-login form .btn-primary {
     width: 100%; }
 
 * {
