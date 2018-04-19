@@ -19,7 +19,6 @@ var Article = function(element) {
     });
 
     _this.commentButton.addEventListener('click', function(e) {
-        console.log('comment');
         _this.newCommentSection.setAttribute('data-active', 1);
         _this.commentInput.focus();
     });
@@ -40,12 +39,9 @@ var Article = function(element) {
     };
 
     _this.commentPublishButton.addEventListener('click', function(e) {
-        console.log('publish comment');
-
         wpost('/api/article/comment/' + _this.dataId, {
             'content': _this.commentInput.value
         }, function(data) {
-            console.log(data);
             _this.refreshComments();
         });
 
