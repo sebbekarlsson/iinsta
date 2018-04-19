@@ -1,0 +1,45 @@
+<article id='article-{{ article.id }}'>
+    <header>
+        <section>
+            <div class='bar-item'>
+                <span class='circle'></span>
+            </div>
+            <div class='bar-item'>
+                <span>
+                    <p>{{ article.user.name }}</p>
+                    <i>Gothenburg</i>
+                </span>
+            </div>
+        </section>
+        <section>
+            <div class='bar-item'>
+                <span class='material-icons btn-more'>more_horiz</span>
+            </div>
+        </section>
+    </header>
+    <section style='background-image: url("/uploads/{{ article.media.filename }}");'>
+    </section> <!-- image section -->
+    <section>
+        <section>
+            <div class='bar-item'>
+                <span class='material-icons btn-like'>thumb_up</span>
+            </div>
+            <div class='bar-item'>
+                <span class='material-icons btn-comment'>comment</span>
+            </div>
+        </section>
+        <section></section>
+    </section> <!-- like bar section -->
+    <section>
+        <ul>
+            <li><span>{{ article.user.name }}</span><span>{{ article.content }}</span></li>
+            <li><span>JohnDoe</span><span>this is stupid...</span></li>
+            <li><span>SomeAccount</span><span>I like it!</span></li>
+        </ul>
+        <div class='new-comment'>
+            <input type='text' placeholder='Add a comment...'/>
+            <button class='btn-comment-publish'>Publish</button>
+        </div>
+    </section> <!-- comments section -->
+</article>
+<script type='text/javascript'>new Article(document.getElementById('article-{{ article.id }}'));</script>
