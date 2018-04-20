@@ -17,7 +17,7 @@ class Article(Document):
     user = ReferenceField(User, required=True)
     likers = ListField(ReferenceField(User))
     comments = ListField(ReferenceField(Comment))
-    created_at = DateTimeField(default=datetime.datetime.now())
+    created_at = DateTimeField(default=datetime.datetime.now)
 
     def like(self, user):
         if user not in self.likers:

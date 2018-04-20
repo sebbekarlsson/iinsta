@@ -18,8 +18,8 @@ class ArticleFacade(object):
             return None
 
     @staticmethod
-    def get_all(query={}):
-        return Article.objects(**query).order_by('content')
+    def get_all(query={}, order_by='-created_at'):
+        return Article.objects(**query).order_by(order_by)
 
     @staticmethod
     def create(**kwargs):
