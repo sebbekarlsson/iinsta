@@ -48,7 +48,7 @@
         </section>
         <section class='image-list'>
             {% for article in articles %}
-                <div class='image-list-item' style='background-image: url("/uploads/{{ article.media.filename }}");'></div>
+                <a class='image-list-item' style='background-image: url("/uploads/{{ article.media.filename }}");' href='/article/{{ article.id }}'></a>
             {% endfor %}
         </section>
     </article>
