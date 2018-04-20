@@ -11,7 +11,8 @@ bp = Blueprint(__name__, __name__, template_folder='templates')
 @login_required
 def show():
     current_user = get_current_user()
-    following = UserFacade.get_all(query={'followers': current_user})
+    following = list(UserFacade.get_all(query={'followers': current_user}))
+    following.append(current_user)
 
     articles = ArticleFacade.get_all(query={'user__in': following})
 
