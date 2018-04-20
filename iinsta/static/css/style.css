@@ -139,9 +139,12 @@
       height: 60px; }
       .article-list article header .bar-item:nth-child(2), .article-list .article header .bar-item:nth-child(2), .view-article article header .bar-item:nth-child(2), .view-article .article header .bar-item:nth-child(2) {
         line-height: 1rem; }
-        .article-list article header .bar-item:nth-child(2) p, .article-list .article header .bar-item:nth-child(2) p, .view-article article header .bar-item:nth-child(2) p, .view-article .article header .bar-item:nth-child(2) p {
+        .article-list article header .bar-item:nth-child(2) p, .article-list article header .bar-item:nth-child(2) a, .article-list .article header .bar-item:nth-child(2) p, .article-list .article header .bar-item:nth-child(2) a, .view-article article header .bar-item:nth-child(2) p, .view-article article header .bar-item:nth-child(2) a, .view-article .article header .bar-item:nth-child(2) p, .view-article .article header .bar-item:nth-child(2) a {
           font-weight: 600;
-          font-size: 14px; }
+          font-size: 14px;
+          text-decoration: none;
+          color: black;
+          display: block; }
         .article-list article header .bar-item:nth-child(2) i, .article-list .article header .bar-item:nth-child(2) i, .view-article article header .bar-item:nth-child(2) i, .view-article .article header .bar-item:nth-child(2) i {
           font-weight: 400;
           font-size: 12px; }

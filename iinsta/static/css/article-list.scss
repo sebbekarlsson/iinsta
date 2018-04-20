@@ -16,9 +16,12 @@
             .bar-item:nth-child(2) {
                 line-height: 1rem;
 
-                p {
+                p, a {
                     font-weight: 600;
                     font-size: 14px;
+                    text-decoration: none;
+                    color: black;
+                    display: block;
                 }
 
                 i {
