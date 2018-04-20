@@ -13,6 +13,7 @@ bp = Blueprint(__name__, __name__, template_folder='templates')
 @bp.route('/<account_name>', methods=['POST', 'GET'])
 @login_required
 def show(account_name):
+    current_user = get_current_user()
     user = UserFacade.get(name=account_name)
 
     if not user:
@@ -22,7 +23,10 @@ def show(account_name):
 
     if request.method == 'POST':
         if request.form.get('follow'):
-            print('follow')
+            if current_user in user.followers:
+                user.unfollow(user=current_user)
+            else:
+                user.follow(user=current_user)
 
     return render_template('account.html', user=user, articles=articles)
 

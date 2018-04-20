@@ -18,8 +18,8 @@ class UserFacade(object):
             return None
 
     @staticmethod
-    def get_all():
-        return User.objects().order_by('name')
+    def get_all(query={}):
+        return User.objects(**query).order_by('name')
 
     @staticmethod
     def create(**kwargs):
