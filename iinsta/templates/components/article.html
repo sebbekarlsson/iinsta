@@ -33,7 +33,7 @@
     </section> <!-- like bar section -->
     <section>
         <ul>
-            <li><span>{{ article.user.name }}</span><span>{{ article.content }}</span></li>
+            <li><span>{{ article.user.name }}</span><span>{{ article.get_rendered_content() | safe }}</span></li>
         </ul>
         <ul class='article-comments'>
             {% for comment in article.comments %}
