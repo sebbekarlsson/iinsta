@@ -3,6 +3,7 @@ var Article = function(element) {
     _this.element = element;
     _this.dataId = element.getAttribute('data-id');
     _this.likeButton = element.querySelector('.btn-like');
+    _this.infoLikes = element.querySelector('.info-likes');
     _this.commentButton = element.querySelector('.btn-comment');
     _this.commentPublishButton = element.querySelector('.btn-comment-publish');
     _this.commentInput = element.querySelector('.new-comment input[type="text"]');
@@ -16,6 +17,12 @@ var Article = function(element) {
 
     _this.likeButton.addEventListener('click', function(e) {
         console.log('like');
+
+        wget('/api/article/like/' + _this.dataId, function(data) {
+            data = JSON.parse(data);
+            console.log(data);
+            _this.refresh();
+        });
     });
 
     _this.commentButton.addEventListener('click', function(e) {
@@ -23,11 +30,13 @@ var Article = function(element) {
         _this.commentInput.focus();
     });
 
-    _this.refreshComments = function() {
+    _this.refresh = function() {
         _this.commentsSection.innerHTML = '';
 
         wget('/api/article/' + _this.dataId, function(data) {
             data = JSON.parse(data);
+
+            _this.infoLikes.innerText = data.likers.length;
 
             for (i = 0; i < data.comments.length; i++) {
                 var comment = data.comments[i];
@@ -42,7 +51,7 @@ var Article = function(element) {
         wpost('/api/article/comment/' + _this.dataId, {
             'content': _this.commentInput.value
         }, function(data) {
-            _this.refreshComments();
+            _this.refresh();
         });
 
         _this.commentInput.value = '';

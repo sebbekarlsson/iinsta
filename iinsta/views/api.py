@@ -47,3 +47,20 @@ def show_article_comment(article_id):
     article = ArticleFacade.get(id=ObjectId(article_id))
 
     return jsonify(json.loads(article.to_json()))
+
+
+@bp.route('/article/like/<article_id>', methods=['POST', 'GET'])
+@login_required
+def show_article_like(article_id):
+    user = get_current_user()
+
+    article = ArticleFacade.get(id=ObjectId(article_id))
+
+    if user not in article.likers:
+        article.like(user=user)
+    else:
+        article.unlike(user=user)
+
+    article = ArticleFacade.get(id=ObjectId(article_id))
+
+    return jsonify(json.loads(article.to_json()))
