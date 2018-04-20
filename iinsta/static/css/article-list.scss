@@ -108,12 +108,25 @@
 
                 .bar-item {
                     min-width: 72px;
-
                     @include display-flex;
                     justify-content: center;
                     align-items: center;
                     height: 100%;
                     font-size: 14px;
+
+                    .bar-item-indicator {
+                        min-width: 24px;
+                        height: 24px;
+                        border-radius: 24px;
+                        border-style: solid;
+                        border-width: 1px;
+                        border-color: black;
+                        line-height: 24px;
+                        text-align: center;
+                        color: black;
+                        margin-left: 0.5rem;
+                        font-size: 12px;
+                    }
                 }
             }
 

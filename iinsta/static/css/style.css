@@ -232,6 +232,18 @@
           align-items: center;
           height: 100%;
           font-size: 14px; }
+          .article-list article > section:nth-child(3) > section .bar-item .bar-item-indicator, .article-list article header > section .bar-item .bar-item-indicator, .article-list .article > section:nth-child(3) > section .bar-item .bar-item-indicator, .article-list .article header > section .bar-item .bar-item-indicator, .view-article article > section:nth-child(3) > section .bar-item .bar-item-indicator, .view-article article header > section .bar-item .bar-item-indicator, .view-article .article > section:nth-child(3) > section .bar-item .bar-item-indicator, .view-article .article header > section .bar-item .bar-item-indicator {
+            min-width: 24px;
+            height: 24px;
+            border-radius: 24px;
+            border-style: solid;
+            border-width: 1px;
+            border-color: black;
+            line-height: 24px;
+            text-align: center;
+            color: black;
+            margin-left: 0.5rem;
+            font-size: 12px; }
       .article-list article > section:nth-child(3) > section:nth-child(1), .article-list article header > section:nth-child(1), .article-list .article > section:nth-child(3) > section:nth-child(1), .article-list .article header > section:nth-child(1), .view-article article > section:nth-child(3) > section:nth-child(1), .view-article article header > section:nth-child(1), .view-article .article > section:nth-child(3) > section:nth-child(1), .view-article .article header > section:nth-child(1) {
         flex: none;
         width: 60%; }
