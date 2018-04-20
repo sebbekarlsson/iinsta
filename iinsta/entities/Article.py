@@ -50,7 +50,7 @@ class Article(Document):
 
         for i, word in enumerate(words):
             if word.replace('#', '') in self.tags:
-                words[i] = '<a href="/feed/tag/{}">{}</a>'\
+                words[i] = '<a href="/feed/{}">{}</a>'\
                     .format(word.replace('#', ''), word)
 
         return ' '.join(words)

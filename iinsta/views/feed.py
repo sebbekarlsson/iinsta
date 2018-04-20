@@ -7,13 +7,19 @@ from iinsta.facades.UserFacade import UserFacade
 bp = Blueprint(__name__, __name__, template_folder='templates')
 
 
-@bp.route('/feed')
+@bp.route('/feed/<tag>')
+@bp.route('/feed', defaults={'tag': None})
 @login_required
-def show():
+def show(tag):
     current_user = get_current_user()
     following = list(UserFacade.get_all(query={'followers': current_user}))
     following.append(current_user)
 
-    articles = ArticleFacade.get_all(query={'user__in': following})
+    article_query = {'user__in': following}
+
+    if tag:
+        article_query['tags'] = tag
+
+    articles = ArticleFacade.get_all(query=article_query)
 
     return render_template('feed.html', articles=articles)
