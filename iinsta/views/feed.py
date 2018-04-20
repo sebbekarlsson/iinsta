@@ -15,10 +15,12 @@ def show(tag):
     following = list(UserFacade.get_all(query={'followers': current_user}))
     following.append(current_user)
 
-    article_query = {'user__in': following}
+    article_query = {}
 
     if tag:
         article_query['tags'] = tag
+    else:
+        article_query['user__in'] = following
 
     articles = ArticleFacade.get_all(query=article_query)
 
