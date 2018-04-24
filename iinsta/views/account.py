@@ -1,4 +1,6 @@
 from flask import Blueprint, render_template, request
+import os
+from iinsta.config import config
 from iinsta.session_utils import login_required, get_current_user
 from iinsta.asset_utils import upload_file
 from iinsta.forms.ProfileEditForm import ProfileEditForm
@@ -51,6 +53,17 @@ def show_edit(account_name):
         }
 
         if 'avatar' in request.files:
+            if user.avatar:
+                avatar_path = os.path.join(
+                    config['uploads_dir'],
+                    user.avatar.filename
+                )
+
+                if os.path.isfile(avatar_path):
+                    os.remove(avatar_path)
+
+                user.avatar.delete()
+
             new_name = upload_file(request.files['avatar'])
             asset = AssetFacade.create(
                 name=new_name,
