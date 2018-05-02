@@ -17,14 +17,20 @@ var Search = function(input, button, resultsDOM) {
             for (var i = 0; i < json.length; i++) {
                 var obj = json[i];
 
-                var element = _this.createResultsItem(obj['name'], 'user', '/uploads/' + obj['avatar']['filename']);
+                var element = '';
+
+                if (typeof obj == 'string') {
+                    element = _this.createResultsItem(obj, 'hashtag');
+                } else {
+                    element = _this.createResultsItem(obj['name'], 'user', '/uploads/' + (obj['avatar'] ? obj['avatar']['filename'] : ''));
+                }
                 _this.resultsDOM.innerHTML += element;
             }
         });
     });
 
     _this.createResultsItem = function(name, type, image) {
-        var dom = ["<a href='" + (type == 'user' ? ('/' + name) : '') + "' class='search-results-list-item'>",
+        var dom = ["<a href='" + (type == 'user' ? ('/' + name) : ('/feed/' + name)) + "' class='search-results-list-item'>",
             type == 'user' ? "<section>" : '',
             type == 'user' ? "<span class='circle' style='background-image:url("+ image +")'></span>": '',
             type == 'user' ? "</section>" : '',

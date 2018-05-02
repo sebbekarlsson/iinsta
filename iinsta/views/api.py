@@ -70,7 +70,14 @@ def show_article_like(article_id):
 @bp.route('/search/<query>', methods=['GET', 'POST'])
 @login_required
 def show_search(query):
+    results = []
     users = list(UserFacade.search(query))
+    articles = ArticleFacade.search(query)
+
+    for article in articles:
+        for tag in article.tags:
+            if tag not in results and query.lower() in tag.lower():
+                results.append(tag)
 
     for i, user in enumerate(users):
         _user = json.loads(user.to_json())
@@ -78,6 +85,6 @@ def show_search(query):
             else None
         del _user['password']
 
-        users[i] = _user
+        results.append(_user)
 
-    return jsonify(users)
+    return jsonify(results)
