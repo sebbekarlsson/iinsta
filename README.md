@@ -3,8 +3,8 @@
 
 <img src='shot.png' width='300px'/>
 
-## Installing and Running the development environent
-> Here is how to run the development environemnt, these are the requirements:
+## Installing and Running the development environment
+> Here is how to run the development environment, these are the requirements:
 
 * python 2.7
 * python-virtualenv
