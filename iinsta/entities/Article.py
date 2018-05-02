@@ -26,6 +26,12 @@ class Article(Document):
 
         return super(Article, self).save(*args, **kwargs)
 
+    def delete(self, *args, **kwargs):
+        for comment in self.comments:
+            comment.delete()
+
+        return super(Article, self).delete(*args, **kwargs)
+
     def like(self, user):
         if user not in self.likers:
             self.likers.append(user)

@@ -12,6 +12,36 @@
 
         header {
             height: 60px;
+            position: relative;
+
+            .bar-item {
+                position: relative;
+
+                .menu-more {
+                    position: absolute;
+                    top: 60px;
+                    right: 0;
+                    width: 100px;
+                    background-color: white;
+
+                    button {
+                        @include remove-mobile-styling;
+                        background: none;
+                        border: none;
+                        outline: none;
+                        height: 32px;
+                        line-height: 32px;
+                        box-sizing: border-box;
+                        padding-left: 0.5rem;
+                        font-size: 100%;
+                        width: 100%;
+                    }
+
+                    &[data-active='0'] {
+                        display: none;
+                    }
+                }
+            }
 
             .bar-item:nth-child(2) {
                 line-height: 1rem;
@@ -73,7 +103,7 @@
 
             .new-comment {
                 display: none;
-                
+
                 &[data-active] {
                     @include display-flex;
                     flex-direction: row;

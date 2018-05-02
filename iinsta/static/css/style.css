@@ -136,7 +136,30 @@
   .article-list article, .article-list .article, .view-article article, .view-article .article {
     font-family: 'Lato', sans-serif; }
     .article-list article header, .article-list .article header, .view-article article header, .view-article .article header {
-      height: 60px; }
+      height: 60px;
+      position: relative; }
+      .article-list article header .bar-item, .article-list .article header .bar-item, .view-article article header .bar-item, .view-article .article header .bar-item {
+        position: relative; }
+        .article-list article header .bar-item .menu-more, .article-list .article header .bar-item .menu-more, .view-article article header .bar-item .menu-more, .view-article .article header .bar-item .menu-more {
+          position: absolute;
+          top: 60px;
+          right: 0;
+          width: 100px;
+          background-color: white; }
+          .article-list article header .bar-item .menu-more button, .article-list .article header .bar-item .menu-more button, .view-article article header .bar-item .menu-more button, .view-article .article header .bar-item .menu-more button {
+            -webkit-appearance: none;
+            border-radius: 0;
+            background: none;
+            border: none;
+            outline: none;
+            height: 32px;
+            line-height: 32px;
+            box-sizing: border-box;
+            padding-left: 0.5rem;
+            font-size: 100%;
+            width: 100%; }
+          .article-list article header .bar-item .menu-more[data-active='0'], .article-list .article header .bar-item .menu-more[data-active='0'], .view-article article header .bar-item .menu-more[data-active='0'], .view-article .article header .bar-item .menu-more[data-active='0'] {
+            display: none; }
       .article-list article header .bar-item:nth-child(2), .article-list .article header .bar-item:nth-child(2), .view-article article header .bar-item:nth-child(2), .view-article .article header .bar-item:nth-child(2) {
         line-height: 1rem; }
         .article-list article header .bar-item:nth-child(2) p, .article-list article header .bar-item:nth-child(2) a, .article-list .article header .bar-item:nth-child(2) p, .article-list .article header .bar-item:nth-child(2) a, .view-article article header .bar-item:nth-child(2) p, .view-article article header .bar-item:nth-child(2) a, .view-article .article header .bar-item:nth-child(2) p, .view-article .article header .bar-item:nth-child(2) a {

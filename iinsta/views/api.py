@@ -18,6 +18,10 @@ bp = Blueprint(
 @login_required
 def show_article(article_id):
     _article = ArticleFacade.get(id=ObjectId(article_id))
+
+    if not _article:
+        return jsonify(None)
+
     article = json.loads(_article.to_json())
     article['comments'] = []
 
@@ -65,6 +69,21 @@ def show_article_like(article_id):
     article = ArticleFacade.get(id=ObjectId(article_id))
 
     return jsonify(json.loads(article.to_json()))
+
+
+@bp.route('/article/delete/<article_id>', methods=['POST', 'GET'])
+@login_required
+def show_article_delete(article_id):
+    user = get_current_user()
+
+    article = ArticleFacade.get(id=ObjectId(article_id))
+
+    if user != article.user:
+        return jsonify({'error': 'Not authorized'}), 401
+
+    article.delete()
+
+    return jsonify({'success': True})
 
 
 @bp.route('/search/<query>', methods=['GET', 'POST'])
