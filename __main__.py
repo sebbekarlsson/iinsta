@@ -24,6 +24,7 @@ def run():
             'utils.js',
             'Article.js',
             'Account.js',
+            'Search.js',
             'app.js',
             filters=['jsmin'],
             output='js/packed.js'

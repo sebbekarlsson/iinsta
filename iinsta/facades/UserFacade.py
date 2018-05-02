@@ -1,6 +1,7 @@
 from iinsta.entities.User import User
 from mongoengine.queryset import DoesNotExist
 from iinsta.mongo import db
+import re
 
 
 class UserFacade(object):
@@ -20,6 +21,11 @@ class UserFacade(object):
     @staticmethod
     def get_all(query={}):
         return User.objects(**query).order_by('name')
+
+    @staticmethod
+    def search(name):
+        regex = re.compile('.*' + name + '.*', re.IGNORECASE)
+        return User.objects(name=regex)
 
     @staticmethod
     def create(**kwargs):

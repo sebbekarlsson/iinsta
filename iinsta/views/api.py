@@ -2,6 +2,7 @@ from flask import Blueprint, jsonify, request
 from bson.objectid import ObjectId
 import json
 from iinsta.facades.ArticleFacade import ArticleFacade
+from iinsta.facades.UserFacade import UserFacade
 from iinsta.session_utils import get_current_user, login_required
 
 
@@ -64,3 +65,17 @@ def show_article_like(article_id):
     article = ArticleFacade.get(id=ObjectId(article_id))
 
     return jsonify(json.loads(article.to_json()))
+
+
+@bp.route('/search/<query>', methods=['GET', 'POST'])
+@login_required
+def show_search(query):
+    users = list(UserFacade.search(query))
+
+    for i, user in enumerate(users):
+        _user = json.loads(user.to_json())
+        _user['avatar'] = json.loads(user.avatar.to_json()) if user.avatar\
+            else None
+        users[i] = _user
+
+    return jsonify(users)
