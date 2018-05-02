@@ -2,7 +2,7 @@
     <header>
         <section>
             <div class='bar-item'>
-                <a href='/{{ article.user.name }}' class='circle'></a>
+                <a href='/{{ article.user.name }}' class='circle' style='background-image: url("/uploads/{{ article.user.avatar.filename if article.user.avatar }}")'></a>
             </div>
             <div class='bar-item'>
                 <span>
@@ -15,7 +15,10 @@
             <div class='bar-item'>
                 <span class='material-icons btn-more'>more_horiz</span>
                 <div class='menu-more' data-active='0'>
-                    <button data-delete class='menu-more-delete'>Delete</button>
+                    {% if current_user == article.user %}
+                        <button data-delete class='menu-more-delete'>Delete</button>
+                    {% endif %}
+                    <button onclick='window.location.href="/{{ article.user.name }}";'>View User</button>
                 </div>
             </div>
         </section>
