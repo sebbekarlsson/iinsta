@@ -9,6 +9,7 @@
 * python 2.7
 * python-virtualenv
 * ruby sass gem
+* A running instance of MongoDB
 
 ### Setup
 > First create a virtualenv:
@@ -18,6 +19,14 @@
 > Source it
 
     source ./venv/bin/activate
+
+> Create the config file:
+
+    cp config.example.json config.json
+
+> Edit the config:
+
+    vim config.json
 
 > Run the setup:
 
