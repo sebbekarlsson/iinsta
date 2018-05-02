@@ -76,6 +76,8 @@ def show_search(query):
         _user = json.loads(user.to_json())
         _user['avatar'] = json.loads(user.avatar.to_json()) if user.avatar\
             else None
+        del _user['password']
+
         users[i] = _user
 
     return jsonify(users)
